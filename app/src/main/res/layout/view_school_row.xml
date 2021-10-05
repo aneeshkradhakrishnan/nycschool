@@ -1,0 +1,107 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="school"
+            type="com.explained.nycschools.models.SchoolInfo" />
+        <variable
+            name="mainVm"
+            type="com.explained.nycschools.vm.MainViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:padding="@dimen/margin_medium"
+        android:onClick="@{() -> mainVm.itemClicked(school)}">
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_launcher"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/schoolName"
+            app:layout_constraintBottom_toBottomOf="@id/schoolName"/>
+
+        <TextView
+            android:id="@+id/schoolName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_medium"
+            android:layout_marginStart="@dimen/margin_small"
+            android:text="@{school.schoolName}"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/thumbnail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="School Name"/>
+
+        <TextView
+            android:id="@+id/neighbourhood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_xsmall"
+            android:text="@{school.neighborhood}"
+            android:paddingBottom="@dimen/margin_xsmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/schoolName"
+            tools:text="Neighbourhood"/>
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{school.primaryAddress}"
+            android:textSize="@dimen/text_xsmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/neighbourhood"
+            tools:text="Address" />
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:text="@{school.city}"
+            android:textSize="@dimen/text_xsmall"
+            app:layout_constraintStart_toEndOf="@+id/address"
+            app:layout_constraintTop_toBottomOf="@id/neighbourhood"
+            tools:text="City" />
+
+        <TextView
+            android:id="@+id/zip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:text="@{school.zip}"
+            android:textSize="@dimen/text_xsmall"
+            app:layout_constraintStart_toEndOf="@+id/city"
+            app:layout_constraintTop_toBottomOf="@id/neighbourhood"
+            tools:text="Zip" />
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:text="@{school.stateCode}"
+            android:textSize="@dimen/text_xsmall"
+            app:layout_constraintStart_toEndOf="@+id/zip"
+            app:layout_constraintTop_toBottomOf="@id/neighbourhood"
+            tools:text="State" />
+
+        <TextView
+            android:id="@+id/website"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_small"
+            android:text="@{school.website}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address"
+            tools:text="Website"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

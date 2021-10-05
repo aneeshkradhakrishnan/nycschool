@@ -1,0 +1,11 @@
+ext {
+    kotlin_version = '1.6.0-M1'
+    gradle_version = '4.2.1'
+    core_version = '1.6.0'
+    dagger_version = '2.38'
+    retrofit_version = '2.9.0'
+    okhttplogger_version = '4.9.1'
+    rxjava_version = '3.0.0'
+    rxandroid_version ='3.0.0'
+    rxadapter_version = '2.9.0'
+}
