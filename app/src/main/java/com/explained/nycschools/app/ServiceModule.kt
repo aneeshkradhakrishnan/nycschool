@@ -11,7 +11,7 @@ import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 @Module
-class ServiceModule {
+open class ServiceModule {
 
     companion object {
         const val HOST = "https://data.cityofnewyork.us/"

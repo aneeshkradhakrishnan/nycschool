@@ -13,7 +13,7 @@
         tools:context=".MainActivity">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/photos_view"
+            android:id="@+id/schoolView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:setAdapter="@{vm.adapter}"

@@ -17,7 +17,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.explained.nycschools.app.EspressoTestRunner"
     }
 
     dataBinding {
@@ -65,4 +65,16 @@ dependencies {
     //RxJava
     implementation "io.reactivex.rxjava3:rxjava:$rxjava_version"
     implementation "io.reactivex.rxjava3:rxandroid:$rxandroid_version"
+
+    //Mockk
+    testImplementation "io.mockk:mockk:${mockk_version}"
+    testImplementation "junit:junit:${junit_version}"
+    testImplementation "com.squareup.okhttp3:logging-interceptor:$okhttplogger_version"
+
+    //Espresso
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:3.4.0"
+    androidTestImplementation "androidx.test:runner:$testrunner_version"
+    androidTestImplementation "androidx.test:rules:$testrunner_version"
+    androidTestImplementation "com.squareup.okhttp3:logging-interceptor:$okhttplogger_version"
 }

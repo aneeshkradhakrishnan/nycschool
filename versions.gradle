@@ -8,4 +8,10 @@ ext {
     rxjava_version = '3.0.0'
     rxandroid_version ='3.0.0'
     rxadapter_version = '2.9.0'
+
+    okhttplogger_version = '3.9.0'
+    mockk_version = '1.9.3'
+    junit_version= '4.12'
+    espresso_version = '3.4.0'
+    testrunner_version = '1.1.0'
 }
