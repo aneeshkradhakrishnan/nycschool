@@ -70,6 +70,7 @@ dependencies {
     testImplementation "io.mockk:mockk:${mockk_version}"
     testImplementation "junit:junit:${junit_version}"
     testImplementation "com.squareup.okhttp3:logging-interceptor:$okhttplogger_version"
+    testImplementation "org.mockito:mockito-core:${mock_version}"
 
     //Espresso
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"

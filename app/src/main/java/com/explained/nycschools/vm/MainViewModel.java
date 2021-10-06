@@ -38,7 +38,6 @@ public class MainViewModel extends BaseViewModel<MainVmManager> {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     public void onCreate() {
-        Log.i(TAG, "ON_CREATE Method");
         this.adapter = manager.getSchoolListAdapter();
         subscribeOnLifeCycle(manager.getSchoolInfoList()
                 .subscribe(this::setSchoolInfo, this::handleException));
